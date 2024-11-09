@@ -27,11 +27,10 @@ jobs:
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       run: |
         dir
-        cd
         git clone https://github.com/xmrig/xmrig-deps
         dir
         dir xmrig-deps
-        cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -G "Visual Studio 17 2022" -A x64 -DXMRIG_DEPS=c:\xmrig-deps\msvc2019\x64
+        cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -G "Visual Studio 17 2022" -A x64 -DXMRIG_DEPS=D:\a\xmrig\xmrig\xmrig-deps\msvc2019\x64
 
     - name: Build
       # Build your program with the given configuration
